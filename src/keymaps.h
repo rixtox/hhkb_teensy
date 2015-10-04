@@ -8,6 +8,16 @@
 #define KEY_NO    ( 0x00 | 0xC000 )
 #define KEY_FN0   ( 0x01 | 0xC000 )
 #define KEY_TRNS  ( 0x02 | 0xC000 )
+#define KEY_LYR0  ( 0x03 | 0xC000 )
+#define KEY_LYR1  ( 0x04 | 0xC000 )
+#define KEY_LYR2  ( 0x05 | 0xC000 )
+#define KEY_LYR3  ( 0x06 | 0xC000 )
+#define KEY_LYR4  ( 0x07 | 0xC000 )
+#define KEY_LYR5  ( 0x08 | 0xC000 )
+#define KEY_LYR6  ( 0x09 | 0xC000 )
+#define KEY_LYR7  ( 0x0a | 0xC000 )
+#define KEY_LYR8  ( 0x0b | 0xC000 )
+#define KEY_LYR9  ( 0x0c | 0xC000 )
 #define KEY_MINS KEY_MINUS
 #define KEY_EQL KEY_EQUAL
 #define KEY_BSLS KEY_BACKSLASH
@@ -66,3 +76,4 @@
 }
 
 extern const int keymaps[][MATRIX_ROWS][MATRIX_COLS];
+extern const int keymap_count;

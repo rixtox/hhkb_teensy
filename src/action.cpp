@@ -19,6 +19,12 @@ void send_event(keyevent_t e) {
     /* Macro keys */
     if (e.press && keycode == KEY_FN0) {
       fn_mode = 1;
+    } else if (!e.press && keycode >= KEY_LYR0 && keycode <= KEY_LYR9) {
+      int keymap = keycode - KEY_LYR0 + 1;
+      if (keymap > 0 && keymap <= keymap_count) {
+        current_keymap = keymap;
+        usb_keyboard_release_all();
+      }
     }
     return;
   }
