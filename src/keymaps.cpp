@@ -9,17 +9,17 @@ const int keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Caps |LR0|LR1|LR2|LR3|LR4|LR5|LR6|Psc|Slk|Pus|Up |   |Backs|
      * |-----------------------------------------------------------|
-     * |      |VoD|VoU|Mut|   |   |  *|  /|Hom|PgU|Lef|Rig|Enter   |
+     * |      |VoD|VoU|Mut|RSBT|TUSB|  *|  /|Hom|PgU|Lef|Rig|Enter   |
      * |-----------------------------------------------------------|
-     * |        |   |   |   |   |   |  +|  -|End|PgD|Dow|      |   |
+     * |        |   |   |   |   |TGBT|  +|  -|End|PgD|Dow|      |   |
      * `-----------------------------------------------------------'
      *       |   |     |                       |     |   |
      *       `-------------------------------------------'
      */
-    KEYMAP(TRNS, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL,   \
-           CAPS,LYR0,LYR1,LYR2,LYR3,LYR4,LYR5,LYR6,PSCR,SLCK,PAUS, UP, TRNS, BSPC,      \
-           TRNS,VOLD,VOLU,MUTE,TRNS,TRNS,PAST,PSLS,HOME,PGUP,LEFT,RGHT,PENT,            \
-           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PPLS,PMNS,END, PGDN,DOWN,TRNS,TRNS,            \
+    KEYMAP(TRNS,  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9, F10, F11, F12, INS, DEL,  \
+           CAPS,LYR0,LYR1,LYR2,LYR3,LYR4,LYR5,LYR6,PSCR,SLCK,PAUS, UP, TRNS,BSPC,       \
+           TRNS,VOLD,VOLU,MUTE,RSBT,TUSB,PAST,PSLS,HOME,PGUP,LEFT,RGHT,PENT,            \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TGBT,PPLS,PMNS,END, PGDN,DOWN,TRNS,TRNS,            \
                 TRNS,TRNS,          TRNS,               TRNS,TRNS),
 
     /* Layer 1: Default Layer

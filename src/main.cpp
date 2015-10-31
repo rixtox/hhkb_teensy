@@ -9,6 +9,7 @@ extern "C" int main(void) {
 }
 
 void setup() {
+  BTSERIAL.begin(BTBAUD);
   Keyboard.begin();
   pinMode(KEY, INPUT_PULLUP);
   pinMode(HYS, OUTPUT);
@@ -19,6 +20,7 @@ void setup() {
   pinMode(COLB, OUTPUT);
   pinMode(COLC, OUTPUT);
   pinMode(ENAB, OUTPUT);
+  pinMode(RSBT, OUTPUT);
 }
 
 void loop() {

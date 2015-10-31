@@ -18,6 +18,9 @@
 #define KEY_LYR7  ( 0x0a | 0xC000 )
 #define KEY_LYR8  ( 0x0b | 0xC000 )
 #define KEY_LYR9  ( 0x0c | 0xC000 )
+#define KEY_RSBT  ( 0x0d | 0xC000 ) // Reset Bluetooth
+#define KEY_TUSB  ( 0x0e | 0xC000 ) // Toggle USB driver
+#define KEY_TGBT  ( 0x0f | 0xC000 ) // Toggle Bluetooth driver
 #define KEY_MINS KEY_MINUS
 #define KEY_EQL KEY_EQUAL
 #define KEY_BSLS KEY_BACKSLASH
