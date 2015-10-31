@@ -49,14 +49,30 @@ void release_all() {
 }
 
 int key_macro_fn(int &keycode, keyevent_t &event) {
-  int fn_keycode;
+  static int pressed_on_fn_mode[20];
+  int fn_keycode, i;
   if (keycode == KEY_FN0) {
     fn_mode = event.press;
     return 0;
-  } else if (fn_mode) {
+  } else if (fn_mode && event.press) {
     fn_keycode = keymaps[0][event.key.row][event.key.col];
     if (fn_keycode != KEY_TRNS) {
+      for (i = 0; i < 20; i++) {
+        if (!pressed_on_fn_mode[i]) {
+          pressed_on_fn_mode[i] = fn_keycode;
+          break;
+        }
+      }
       keycode = fn_keycode;
+    }
+  } else if (!event.press) {
+    fn_keycode = keymaps[0][event.key.row][event.key.col];
+    for (i = 0; i < 20; i++) {
+      if (pressed_on_fn_mode[i] == fn_keycode) {
+        keycode = fn_keycode;
+        pressed_on_fn_mode[i] = 0;
+        break;
+      }
     }
   }
   return 1;
