@@ -120,6 +120,14 @@ int key_macro_toggle_usb(int &keycode, keyevent_t &event) {
   return 1;
 }
 
+int key_macro_reboot_program(int &keycode, keyevent_t &event) {
+  if (event.press && keycode == KEY_RBPG) {
+    _reboot_Teensyduino_();
+    return 0;
+  }
+  return 1;
+}
+
 int key_macro_filter(int &keycode, keyevent_t &event) {
   return keycode < 0xC000;
 }
@@ -138,6 +146,8 @@ void send_event(keyevent_t event) {
     macro_propagation = key_macro_toggle_bt(keycode, event);
   if (macro_propagation)
     macro_propagation = key_macro_toggle_usb(keycode, event);
+  if (macro_propagation)
+    macro_propagation = key_macro_reboot_program(keycode, event);
   if (macro_propagation)
     macro_propagation = key_macro_filter(keycode, event);
   // Send Normal Keys Signal

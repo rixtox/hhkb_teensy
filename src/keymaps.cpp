@@ -5,7 +5,7 @@ const int keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Layer 0: Fn mode
      * ,-----------------------------------------------------------.
-     * |   | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
+     * |RBPG| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
      * |-----------------------------------------------------------|
      * |Caps |LR0|LR1|LR2|LR3|LR4|LR5|LR6|Psc|Slk|Pus|Up |   |Backs|
      * |-----------------------------------------------------------|
@@ -16,7 +16,7 @@ const int keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *       |   |     |                       |     |   |
      *       `-------------------------------------------'
      */
-    KEYMAP(TRNS,  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9, F10, F11, F12, INS, DEL,  \
+    KEYMAP(RBPG,  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9, F10, F11, F12, INS, DEL,  \
            CAPS,LYR0,LYR1,LYR2,LYR3,LYR4,LYR5,LYR6,PSCR,SLCK,PAUS, UP, TRNS,BSPC,       \
            TRNS,VOLD,VOLU,MUTE,RSBT,TUSB,PAST,PSLS,HOME,PGUP,LEFT,RGHT,PENT,            \
            TRNS,TRNS,TRNS,TRNS,TRNS,TGBT,PPLS,PMNS,END, PGDN,DOWN,TRNS,TRNS,            \
